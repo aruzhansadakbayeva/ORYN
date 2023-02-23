@@ -21,13 +21,45 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct MovieBookingApp: App {
 
+    @StateObject var sessionService = SessionServiceImpl()
+    @State var currentTab: Tab = .home
 
-    init(){
+    init() {
         FirebaseApp.configure()
+        UITabBar.appearance().isHidden = true
     }
+
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                switch sessionService.state {
+                case .loggedIn:
+                    VStack(spacing: 0) {
+                        
+                        TabView(selection: $currentTab) {
+                            HomeView()
+                                .tag(Tab.home)
+                            
+                            Text("Location")
+                                .tag(Tab.location)
+                            
+                            Text("Category")
+                                .tag(Tab.category)
+                            
+                            //Text("Profile")
+                                //.tag(Tab.profile)
+                            AccountView().environmentObject(sessionService).tag(Tab.profile)
+                            
+                        }
+      
+                        CustomTabBar(currentTab: $currentTab)
+                    }
+                case .loggedOut:
+                    LoginView()
+                }
+                    
+                }
         }
     }
 }

@@ -31,6 +31,25 @@
 		33D859A428AC34A000C842CF /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D859A328AC34A000C842CF /* Tickets.swift */; };
 		33D859A628AD6ABB00C842CF /* TabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D859A528AD6ABB00C842CF /* TabData.swift */; };
 		33D859A828AD74F000C842CF /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D859A728AD74F000C842CF /* CustomTabBar.swift */; };
+		CD4A401E29A7750B0061744A /* PreviewLayoutComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A401829A7750B0061744A /* PreviewLayoutComponentModifier.swift */; };
+		CD4A401F29A7750B0061744A /* CloseModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A401929A7750B0061744A /* CloseModifier.swift */; };
+		CD4A402029A7750B0061744A /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A401B29A7750B0061744A /* InputTextFieldView.swift */; };
+		CD4A402129A7750B0061744A /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A401C29A7750B0061744A /* InputPasswordView.swift */; };
+		CD4A402229A7750B0061744A /* ButtonComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A401D29A7750B0061744A /* ButtonComponentView.swift */; };
+		CD4A403929A775340061744A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A403229A775310061744A /* LoginViewModel.swift */; };
+		CD4A403A29A775340061744A /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A403429A775310061744A /* LoginCredentials.swift */; };
+		CD4A403B29A775340061744A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A403629A775310061744A /* LoginView.swift */; };
+		CD4A403C29A775340061744A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A403829A775310061744A /* LoginService.swift */; };
+		CD4A404429A775430061744A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A403F29A775430061744A /* ForgotPasswordViewModel.swift */; };
+		CD4A404529A775430061744A /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A404129A775430061744A /* ForgotPasswordView.swift */; };
+		CD4A404629A775430061744A /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A404329A775430061744A /* ForgotPasswordService.swift */; };
+		CD4A405029A7754A0061744A /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A404929A7754A0061744A /* RegistrationViewModel.swift */; };
+		CD4A405129A7754A0061744A /* RegistrationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A404B29A7754A0061744A /* RegistrationDetails.swift */; };
+		CD4A405229A7754A0061744A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A404D29A7754A0061744A /* RegisterView.swift */; };
+		CD4A405329A7754A0061744A /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A404F29A7754A0061744A /* RegistrationService.swift */; };
+		CD4A405929A775530061744A /* SessionUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A405629A775530061744A /* SessionUserDetails.swift */; };
+		CD4A405A29A775530061744A /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A405829A775530061744A /* SessionService.swift */; };
+		CD4A405E29A7755A0061744A /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A405D29A775590061744A /* AccountView.swift */; };
 		CD4E60DD299F85610003229E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD4E60DC299F85610003229E /* GoogleService-Info.plist */; };
 		CDD1A073299E1636003E4C43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CDD1A072299E1636003E4C43 /* FirebaseFirestore */; };
 		CDD1A075299E1636003E4C43 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CDD1A074299E1636003E4C43 /* FirebaseFirestoreSwift */; };
@@ -65,6 +84,25 @@
 		33D859A528AD6ABB00C842CF /* TabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabData.swift; sourceTree = "<group>"; };
 		33D859A728AD74F000C842CF /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		CD0F872829A157BF002D6056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD4A401829A7750B0061744A /* PreviewLayoutComponentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewLayoutComponentModifier.swift; sourceTree = "<group>"; };
+		CD4A401929A7750B0061744A /* CloseModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseModifier.swift; sourceTree = "<group>"; };
+		CD4A401B29A7750B0061744A /* InputTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
+		CD4A401C29A7750B0061744A /* InputPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPasswordView.swift; sourceTree = "<group>"; };
+		CD4A401D29A7750B0061744A /* ButtonComponentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonComponentView.swift; sourceTree = "<group>"; };
+		CD4A403229A775310061744A /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CD4A403429A775310061744A /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		CD4A403629A775310061744A /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CD4A403829A775310061744A /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		CD4A403F29A775430061744A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		CD4A404129A775430061744A /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		CD4A404329A775430061744A /* ForgotPasswordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
+		CD4A404929A7754A0061744A /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		CD4A404B29A7754A0061744A /* RegistrationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationDetails.swift; sourceTree = "<group>"; };
+		CD4A404D29A7754A0061744A /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		CD4A404F29A7754A0061744A /* RegistrationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		CD4A405629A775530061744A /* SessionUserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionUserDetails.swift; sourceTree = "<group>"; };
+		CD4A405829A775530061744A /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		CD4A405D29A775590061744A /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CD4E60DC299F85610003229E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDD1A077299E16FC003E4C43 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +124,12 @@
 		33D8596F28ABDDCB00C842CF = {
 			isa = PBXGroup;
 			children = (
+				CD4A405B29A775590061744A /* Account */,
+				CD4A405429A775530061744A /* Session */,
+				CD4A404729A7754A0061744A /* Register */,
+				CD4A403D29A775430061744A /* ForgotPassword */,
+				CD4A403029A775310061744A /* Login */,
+				CD4A401629A7750B0061744A /* Base */,
 				33D8597A28ABDDCB00C842CF /* Oryn */,
 				33D8597928ABDDCB00C842CF /* Products */,
 			);
@@ -181,6 +225,195 @@
 			path = Cards;
 			sourceTree = "<group>";
 		};
+		CD4A401629A7750B0061744A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A401729A7750B0061744A /* Modifier */,
+				CD4A401A29A7750B0061744A /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CD4A401729A7750B0061744A /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A401829A7750B0061744A /* PreviewLayoutComponentModifier.swift */,
+				CD4A401929A7750B0061744A /* CloseModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		CD4A401A29A7750B0061744A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A401B29A7750B0061744A /* InputTextFieldView.swift */,
+				CD4A401C29A7750B0061744A /* InputPasswordView.swift */,
+				CD4A401D29A7750B0061744A /* ButtonComponentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD4A403029A775310061744A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A403129A775310061744A /* ViewModel */,
+				CD4A403329A775310061744A /* Model */,
+				CD4A403529A775310061744A /* View */,
+				CD4A403729A775310061744A /* Service */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CD4A403129A775310061744A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A403229A775310061744A /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD4A403329A775310061744A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A403429A775310061744A /* LoginCredentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD4A403529A775310061744A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A403629A775310061744A /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD4A403729A775310061744A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A403829A775310061744A /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CD4A403D29A775430061744A /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A403E29A775430061744A /* ViewModel */,
+				CD4A404029A775430061744A /* View */,
+				CD4A404229A775430061744A /* Service */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		CD4A403E29A775430061744A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A403F29A775430061744A /* ForgotPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD4A404029A775430061744A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A404129A775430061744A /* ForgotPasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD4A404229A775430061744A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A404329A775430061744A /* ForgotPasswordService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CD4A404729A7754A0061744A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A404829A7754A0061744A /* ViewModel */,
+				CD4A404A29A7754A0061744A /* Model */,
+				CD4A404C29A7754A0061744A /* View */,
+				CD4A404E29A7754A0061744A /* Service */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CD4A404829A7754A0061744A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A404929A7754A0061744A /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD4A404A29A7754A0061744A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A404B29A7754A0061744A /* RegistrationDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD4A404C29A7754A0061744A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A404D29A7754A0061744A /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD4A404E29A7754A0061744A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A404F29A7754A0061744A /* RegistrationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CD4A405429A775530061744A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A405529A775530061744A /* Model */,
+				CD4A405729A775530061744A /* Service */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		CD4A405529A775530061744A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A405629A775530061744A /* SessionUserDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD4A405729A775530061744A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A405829A775530061744A /* SessionService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CD4A405B29A775590061744A /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A405C29A775590061744A /* View */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		CD4A405C29A775590061744A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A405D29A775590061744A /* AccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CDD1A076299E16E4003E4C43 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,28 +502,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4A403A29A775340061744A /* LoginCredentials.swift in Sources */,
+				CD4A405329A7754A0061744A /* RegistrationService.swift in Sources */,
+				CD4A405029A7754A0061744A /* RegistrationViewModel.swift in Sources */,
 				33D8599228AC179800C842CF /* TimeButton.swift in Sources */,
 				33D859A228AC2DF800C842CF /* utils.swift in Sources */,
+				CD4A403929A775340061744A /* LoginViewModel.swift in Sources */,
 				33D859A828AD74F000C842CF /* CustomTabBar.swift in Sources */,
+				CD4A402029A7750B0061744A /* InputTextFieldView.swift in Sources */,
+				CD4A404429A775430061744A /* ForgotPasswordViewModel.swift in Sources */,
 				3314726D28AD8298000AFD83 /* HomeView.swift in Sources */,
+				CD4A402129A7750B0061744A /* InputPasswordView.swift in Sources */,
+				CD4A403B29A775340061744A /* LoginView.swift in Sources */,
 				CDD1A078299E16FC003E4C43 /* NewsFeedView.swift in Sources */,
 				3314727F28B03852000AFD83 /* RoundButton.swift in Sources */,
+				CD4A405129A7754A0061744A /* RegistrationDetails.swift in Sources */,
 				33D859A628AD6ABB00C842CF /* TabData.swift in Sources */,
 				3314727B28B0331E000AFD83 /* StatusUI.swift in Sources */,
 				33D8597E28ABDDCB00C842CF /* ContentView.swift in Sources */,
+				CD4A405E29A7755A0061744A /* AccountView.swift in Sources */,
+				CD4A401E29A7750B0061744A /* PreviewLayoutComponentModifier.swift in Sources */,
 				3314726F28AEAF4F000AFD83 /* CustomSearchBar.swift in Sources */,
+				CD4A405929A775530061744A /* SessionUserDetails.swift in Sources */,
 				3314727528B0292A000AFD83 /* LargeButton.swift in Sources */,
 				33D8598E28AC0EA600C842CF /* TicketData.swift in Sources */,
 				3314727928B02E31000AFD83 /* SeatsView.swift in Sources */,
+				CD4A404629A775430061744A /* ForgotPasswordService.swift in Sources */,
+				CD4A404529A775430061744A /* ForgotPasswordView.swift in Sources */,
 				33D8599B28AC26E000C842CF /* CircleButton.swift in Sources */,
 				33D8599028AC10A500C842CF /* PosterData.swift in Sources */,
 				33D8599728AC1E4D00C842CF /* CircleBackground.swift in Sources */,
+				CD4A405229A7754A0061744A /* RegisterView.swift in Sources */,
 				33D859A428AC34A000C842CF /* Tickets.swift in Sources */,
 				3314727328B01EE4000AFD83 /* BookingView.swift in Sources */,
 				3314727128AEB325000AFD83 /* ScrollSection.swift in Sources */,
+				CD4A401F29A7750B0061744A /* CloseModifier.swift in Sources */,
 				33D8599D28AC288000C842CF /* TicketView.swift in Sources */,
+				CD4A403C29A775340061744A /* LoginService.swift in Sources */,
 				33D859A028AC2D0700C842CF /* Ticket.swift in Sources */,
 				33D8597C28ABDDCB00C842CF /* MovieBookingApp.swift in Sources */,
+				CD4A405A29A775530061744A /* SessionService.swift in Sources */,
+				CD4A402229A7750B0061744A /* ButtonComponentView.swift in Sources */,
 				33D8599428AC17A200C842CF /* DateButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
