@@ -8,6 +8,7 @@ import Combine
 import Foundation
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 enum RegistrationKeys: String {
     case firstName
@@ -29,8 +30,7 @@ final class RegistrationServiceImpl: RegistrationService {
                         } else {
                             if let uid = res?.user.uid {
                                 let values = [RegistrationKeys.firstName.rawValue: details.firstName,
-                                              RegistrationKeys.lastName.rawValue: details.lastName,
-                                              RegistrationKeys.occupation.rawValue: details.occupation
+                                              RegistrationKeys.lastName.rawValue: details.lastName
                                 ] as [String : Any]
                                 
                                 Database.database()
