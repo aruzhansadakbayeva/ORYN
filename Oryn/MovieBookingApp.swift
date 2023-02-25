@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import FirebaseCore
+
 import UIKit
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -36,8 +37,9 @@ struct MovieBookingApp: App {
                 switch sessionService.state {
                 case .loggedIn:
                     VStack(spacing: 0) {
-                        
                         TabView(selection: $currentTab) {
+                            
+                            
                             HomeView()
                                 .tag(Tab.home)
                             
@@ -47,17 +49,35 @@ struct MovieBookingApp: App {
                             Text("Category")
                                 .tag(Tab.category)
                             
+                            
                             //Text("Profile")
-                                //.tag(Tab.profile)
+                            //.tag(Tab.profile)
                             AccountView().environmentObject(sessionService).tag(Tab.profile)
                             
                         }
-      
                         CustomTabBar(currentTab: $currentTab)
                     }
                 case .loggedOut:
-                    LoginView()
+                    VStack(spacing: 0) {
+                        TabView(selection: $currentTab) {
+                            
+                            HomeView()
+                                .tag(Tab.home)
+                            
+                            Text("Location")
+                                .tag(Tab.location)
+                            
+                            Text("Category")
+                                .tag(Tab.category)
+                            
+                            LoginView().environmentObject(sessionService).tag(Tab.profile)
+                            
+                            
+                        }
+                        CustomTabBar(currentTab: $currentTab)
+                    }
                 }
+       
                     
                 }
         }
