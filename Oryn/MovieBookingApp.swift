@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import UIKit
 import Firebase
 import FirebaseCore
-
+import FirebaseAuth
 import UIKit
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -17,6 +18,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     return true
   }
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+      for urlContext in URLContexts {
+          let url = urlContext.url
+          Auth.auth().canHandle(url)
+      }
+      // URL not auth related, developer should handle it.
+    }
+
+
 }
 
 @main
@@ -43,10 +53,11 @@ struct MovieBookingApp: App {
                             HomeView()
                                 .tag(Tab.home)
                             
-                            Text("Location")
+                           VenueList()
                                 .tag(Tab.location)
                             
-                            Text("Category")
+                          //  Text("Category")
+                            ContentView()
                                 .tag(Tab.category)
                             
                             
@@ -64,7 +75,7 @@ struct MovieBookingApp: App {
                             HomeView()
                                 .tag(Tab.home)
                             
-                            Text("Location")
+                            VenueList()
                                 .tag(Tab.location)
                             
                             Text("Category")

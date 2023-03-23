@@ -15,13 +15,13 @@ struct InputTextFieldView: View {
     
     private let textFieldLeading: CGFloat = 30
     var body: some View {
-        TextField(placeholder, text: $text).frame(maxWidth: .infinity, minHeight: 44).padding(.leading, sfSymbol == nil ? textFieldLeading / 2 : textFieldLeading).keyboardType(keyboardType).background(
+        TextField(placeholder, text: $text).frame(maxWidth: .infinity, minHeight: 44).padding(.leading, sfSymbol == nil ? textFieldLeading / 2 : textFieldLeading).keyboardType(keyboardType).foregroundColor(Color.white).background(
             ZStack(alignment: .leading){
                 if let systemImage = sfSymbol {
-                    Image(systemName: systemImage).font(.system(size: 16, weight: .semibold)).padding(.leading, 5).foregroundColor(Color.gray.opacity(0.5))
+                    Image(systemName: systemImage).font(.system(size: 16, weight: .semibold)).padding(.leading, 5).foregroundColor(Color.white)
                 }
                 
-                RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.gray.opacity(0.25))
+                RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white)
             })
     }
 }

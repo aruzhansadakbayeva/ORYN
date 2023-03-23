@@ -17,13 +17,13 @@ struct ForgotPasswordView: View {
                                    placeholder: "Email",
                                    keyboardType: .emailAddress,
                                    sfSymbol: "envelope")
-                ButtonView(title: "Send Password Reset"){
+                ButtonView(title: "Отправить сброс пароля", background: Color("pink")){
                     vm.sendPasswordReset()
                     presentationMode.wrappedValue.dismiss()
                 }
                 
             }.padding(.horizontal, 15)
-                .navigationTitle("Reset Password").applyClose()
+                .navigationTitle("Сбросить пароль").applyClose()
         }
     }
 }

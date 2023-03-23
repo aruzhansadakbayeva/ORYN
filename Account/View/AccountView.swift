@@ -16,7 +16,7 @@ struct AccountView: View {
                 Text("Last Name: \(sessionService.userDetails?.lastName ?? "N/A")")
 
             }
-            ButtonView(title:"Logout"){
+            ButtonView(title:"Выйти", background: Color("pink")){
                 sessionService.logout()
             }
         }.padding(.horizontal, 16)

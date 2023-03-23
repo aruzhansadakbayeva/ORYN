@@ -55,6 +55,7 @@
 		CD4A406629A780830061744A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CD4A406529A780830061744A /* GoogleSignIn */; };
 		CD4A406829A780840061744A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD4A406729A780840061744A /* GoogleSignInSwift */; };
 		CD4E60DD299F85610003229E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD4E60DC299F85610003229E /* GoogleService-Info.plist */; };
+		CD9CC0E129C75E7D0076F9CA /* VenueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CC0E029C75E7D0076F9CA /* VenueList.swift */; };
 		CDD1A073299E1636003E4C43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CDD1A072299E1636003E4C43 /* FirebaseFirestore */; };
 		CDD1A075299E1636003E4C43 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CDD1A074299E1636003E4C43 /* FirebaseFirestoreSwift */; };
 		CDD1A078299E16FC003E4C43 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1A077299E16FC003E4C43 /* NewsFeedView.swift */; };
@@ -108,7 +109,9 @@
 		CD4A405829A775530061744A /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		CD4A405D29A775590061744A /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CD4E60DC299F85610003229E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD9CC0E029C75E7D0076F9CA /* VenueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueList.swift; sourceTree = "<group>"; };
 		CDD1A077299E16FC003E4C43 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
+		CDE9914229AA99C400E34801 /* Oryn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Oryn.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 		33D8597A28ABDDCB00C842CF /* Oryn */ = {
 			isa = PBXGroup;
 			children = (
+				CD9CC0DF29C75E680076F9CA /* VenueList */,
+				CDE9914229AA99C400E34801 /* Oryn.entitlements */,
 				CD0F872829A157BF002D6056 /* Info.plist */,
 				CD4E60DC299F85610003229E /* GoogleService-Info.plist */,
 				CDD1A076299E16E4003E4C43 /* NewsFeed */,
@@ -430,6 +435,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD9CC0DF29C75E680076F9CA /* VenueList */ = {
+			isa = PBXGroup;
+			children = (
+				CD9CC0E029C75E7D0076F9CA /* VenueList.swift */,
+			);
+			path = VenueList;
+			sourceTree = "<group>";
+		};
 		CDD1A076299E16E4003E4C43 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +575,7 @@
 				CD4A403C29A775340061744A /* LoginService.swift in Sources */,
 				33D859A028AC2D0700C842CF /* Ticket.swift in Sources */,
 				33D8597C28ABDDCB00C842CF /* MovieBookingApp.swift in Sources */,
+				CD9CC0E129C75E7D0076F9CA /* VenueList.swift in Sources */,
 				CD4A405A29A775530061744A /* SessionService.swift in Sources */,
 				CD4A402229A7750B0061744A /* ButtonComponentView.swift in Sources */,
 				33D8599428AC17A200C842CF /* DateButton.swift in Sources */,
@@ -690,6 +704,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Oryn/Oryn.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -708,6 +724,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = oryn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -719,6 +736,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Oryn/Oryn.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -737,6 +756,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = oryn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
