@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseCore
 import FirebaseAuth
-import UIKit
+import WebKit
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -78,7 +78,7 @@ struct MovieBookingApp: App {
                             VenueList()
                                 .tag(Tab.location)
                             
-                            Text("Category")
+                            WebView(url: URL(string: "https://github.com")!)
                                 .tag(Tab.category)
                             
                             LoginView().environmentObject(sessionService).tag(Tab.profile)
@@ -93,4 +93,19 @@ struct MovieBookingApp: App {
                 }
         }
     }
+}
+
+
+struct WebView: UIViewRepresentable {
+    let url: URL
+
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        let request = URLRequest(url: url)
+        uiView.load(request)
+    }
+    
 }

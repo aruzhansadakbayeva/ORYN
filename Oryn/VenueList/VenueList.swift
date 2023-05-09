@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import AVFoundation
 
+import Combine
 struct Venue: Identifiable, Decodable {
     let id = UUID()
     let name: String
     let category: String
     let image: String
+    let description: String
 }
 
 struct VenueList: View {
@@ -146,6 +149,11 @@ struct VenueCategoryList: View {
 struct VenueDetail: View {
     
     let venue: Venue
+    @State private var isBookingSheetPresented = false
+    @State private var bookingTime = Date()
+    @State private var numberOfPersons = 1
+    @State private var fullName = ""
+    @State private var email = ""
     
     var body: some View {
         VStack {
@@ -172,19 +180,18 @@ struct VenueDetail: View {
             Text(venue.name)
                 .font(.title)
                 .padding()
-
-            Text("Описание") // add venue description
+            Divider()
+            Text(venue.description) // add venue description
                 .font(.body)
                 .padding()
-
-     
-
+            
+            
             Button(action: {
-                // handle booking action
+                isBookingSheetPresented.toggle()
             }) {
                 HStack {
                     Spacer()
-                    Text("Забронировать")
+                    Text("Забронировать место")
                         .font(.headline)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
@@ -194,10 +201,137 @@ struct VenueDetail: View {
                 .padding(.horizontal, 20)
                 .background(Color("pink"))
                 .cornerRadius(20)
-           
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.white, lineWidth: 2)
+                )
             }
             .padding(.bottom, 50)
+            .sheet(isPresented: $isBookingSheetPresented, onDismiss: {
+                // Handle dismiss action if needed
+            }, content: {
+                BookingSheet(bookingTime: $bookingTime,
+                             numberOfPersons: $numberOfPersons,
+                             fullName: $fullName,
+                             email: $email,
+                             onBookingConfirmed: {
+                    // Handle booking confirmed action
+                })
+            })
+            
+            Text("Стоимость бронирования: ? тг.")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+                .padding(.bottom)
+        }
+    }
+    
+    
+    struct BookingSheet: View {
+        
+        @Binding var bookingTime: Date
+        @Binding var numberOfPersons: Int
+        @Binding var fullName: String
+        @Binding var email: String
+        var onBookingConfirmed: () -> Void
+        
+        var body: some View {
+            NavigationView {
+                Form {
+                    DatePicker("Время бронирования", selection: $bookingTime, displayedComponents: .hourAndMinute)
+                    Stepper("Количество персон: \(numberOfPersons)", value: $numberOfPersons, in: 1...10)
+                    TextField("ФИО", text: $fullName)
+                    TextField("Email", text: $email)
+                }
+                .navigationBarTitle(Text("Бронирование"), displayMode: .inline)
+                .navigationBarItems(
+                    trailing: NavigationLink(
+                        destination: PaymentView(), // Замените PaymentView() на ваш вид
+                        label: {
+                            Text("Перейти к оплате")
+                        }
+                    )
+                )
 
+            }
         }
     }
 }
+
+struct PaymentView: View {
+    @StateObject var paymentViewModel = PaymentViewModel()
+
+    var body: some View {
+        Form {
+            Section(header: Text("Card Details")) {
+                TextField("Card Number", text: $paymentViewModel.cardNumber)
+                    .keyboardType(.numberPad)
+                    .onReceive(Just(paymentViewModel.cardNumber)) { newValue in
+                        let filtered = newValue.filter { "0123456789".contains($0) }
+                        if filtered != newValue {
+                            paymentViewModel.cardNumber = filtered
+                        }
+                        if filtered.count > 16 {
+                            paymentViewModel.cardNumber = String(filtered.prefix(16))
+                        }
+                    }
+                HStack {
+                    TextField("Expiration Date", text: $paymentViewModel.expirationDate)
+                        .keyboardType(.numberPad)
+                    Spacer()
+                    TextField("CVV", text: $paymentViewModel.cvv)
+                        .keyboardType(.numberPad)
+                }
+            }
+
+            Section {
+                NavigationLink(
+                    destination:
+                        FullScreenImageView(imageName: "done")) {
+                        Text("Оплатить бронь")
+                    }
+                
+                .disabled(!paymentViewModel.isValid)
+            }
+        }
+        .navigationBarTitle("Payment Details")
+
+    }
+}
+
+class PaymentViewModel: ObservableObject {
+    @Published var cardNumber: String = ""
+    @Published var expirationDate: String = ""
+    @Published var cvv: String = ""
+
+    var isValid: Bool {
+        !cardNumber.isEmpty && cardNumber.count == 16 && !expirationDate.isEmpty && !cvv.isEmpty
+    }
+
+}
+
+struct FullScreenImageView: View {
+    var imageName: String
+    
+    var body: some View {
+        VStack {
+            Image(imageName)
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+
+        }        .navigationBarItems(
+            leading: EmptyView(),
+            trailing: NavigationLink(
+                destination: Text("Next"),
+                label: {
+                    Text("Далее")
+                })
+               
+        )
+        .navigationBarBackButtonHidden(true)
+    }
+    
+
+}
+

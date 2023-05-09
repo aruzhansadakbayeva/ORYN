@@ -56,6 +56,7 @@
 		CD4A406829A780840061744A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD4A406729A780840061744A /* GoogleSignInSwift */; };
 		CD4E60DD299F85610003229E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD4E60DC299F85610003229E /* GoogleService-Info.plist */; };
 		CD9CC0E129C75E7D0076F9CA /* VenueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CC0E029C75E7D0076F9CA /* VenueList.swift */; };
+		CD9CC0E929CC44760076F9CA /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CC0E829CC44760076F9CA /* ExploreView.swift */; };
 		CDD1A073299E1636003E4C43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CDD1A072299E1636003E4C43 /* FirebaseFirestore */; };
 		CDD1A075299E1636003E4C43 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CDD1A074299E1636003E4C43 /* FirebaseFirestoreSwift */; };
 		CDD1A078299E16FC003E4C43 /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1A077299E16FC003E4C43 /* NewsFeedView.swift */; };
@@ -110,6 +111,7 @@
 		CD4A405D29A775590061744A /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CD4E60DC299F85610003229E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD9CC0E029C75E7D0076F9CA /* VenueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueList.swift; sourceTree = "<group>"; };
+		CD9CC0E829CC44760076F9CA /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		CDD1A077299E16FC003E4C43 /* NewsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedView.swift; sourceTree = "<group>"; };
 		CDE9914229AA99C400E34801 /* Oryn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Oryn.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 				33D8597F28ABDDCC00C842CF /* Assets.xcassets */,
 				33D8598128ABDDCC00C842CF /* Preview Content */,
 				33D859A128AC2DF800C842CF /* utils.swift */,
+				CD9CC0E829CC44760076F9CA /* ExploreView.swift */,
 			);
 			path = Oryn;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				CD4A401E29A7750B0061744A /* PreviewLayoutComponentModifier.swift in Sources */,
 				3314726F28AEAF4F000AFD83 /* CustomSearchBar.swift in Sources */,
 				CD4A405929A775530061744A /* SessionUserDetails.swift in Sources */,
+				CD9CC0E929CC44760076F9CA /* ExploreView.swift in Sources */,
 				3314727528B0292A000AFD83 /* LargeButton.swift in Sources */,
 				33D8598E28AC0EA600C842CF /* TicketData.swift in Sources */,
 				3314727928B02E31000AFD83 /* SeatsView.swift in Sources */,
