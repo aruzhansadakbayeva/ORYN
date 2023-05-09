@@ -15,6 +15,7 @@ struct Venue: Identifiable, Decodable {
     let category: String
     let image: String
     let description: String
+
 }
 
 struct VenueList: View {
@@ -180,12 +181,28 @@ struct VenueDetail: View {
             Text(venue.name)
                 .font(.title)
                 .padding()
+            HStack{
+                Text("★ Рейтинг: 4.2/5")
+                   .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("pink"))
+                    .padding(.bottom, 20)
+                
+                Text("• Средний чек: 3500 тг.")
+                 .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("pink"))
+                    .foregroundColor(.purple)
+                    .padding(.bottom, 20)
+                
+            }
             Divider()
+            
             Text(venue.description) // add venue description
                 .font(.body)
                 .padding()
             
-            
+  
             Button(action: {
                 isBookingSheetPresented.toggle()
             }) {
@@ -320,18 +337,75 @@ struct FullScreenImageView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
 
-        }        .navigationBarItems(
+        }
+        /*.navigationBarItems(
             leading: EmptyView(),
             trailing: NavigationLink(
-                destination: Text("Next"),
+                destination: VenueList(),
                 label: {
                     Text("Далее")
                 })
                
         )
+        */
         .navigationBarBackButtonHidden(true)
     }
     
 
 }
 
+struct Reservation: Identifiable {
+    let id = UUID()
+    let reservationNumber: Int
+
+    let date: Date
+    let guests: Int
+}
+
+struct ReservationListView: View {
+    let reservations = [
+        Reservation(reservationNumber: 1756938,  date: Date(), guests: 2),
+        Reservation(reservationNumber: 9282828, date: Date(timeIntervalSinceNow: 86400), guests: 4),
+        Reservation(reservationNumber: 2445773, date: Date(timeIntervalSinceNow: 172800), guests: 3),
+        Reservation(reservationNumber: 3698473,  date: Date(timeIntervalSinceNow: 259200), guests: 5),
+        Reservation(reservationNumber: 3335577,  date: Date(timeIntervalSinceNow: 345600), guests: 2),
+        Reservation(reservationNumber: 9000224,  date: Date(timeIntervalSinceNow: 432000), guests: 6)
+    ]
+    
+    var body: some View {
+        List(reservations) { reservation in
+            NavigationLink(destination: ReservationDetailView(reservation: reservation)) {
+                VStack(alignment: .leading) {
+                    Text("Reservation #\(reservation.reservationNumber)")
+                        .font(.headline)
+            
+                    Text("\(reservation.date, formatter: dateFormatter)")
+                }
+            }
+        }
+    }
+    
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }()
+}
+
+struct ReservationDetailView: View {
+    let reservation: Reservation
+    
+    var body: some View {
+        VStack {
+    Text("Loading...")
+        }
+    }
+    
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }()
+}

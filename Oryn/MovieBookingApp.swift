@@ -57,7 +57,7 @@ struct MovieBookingApp: App {
                                 .tag(Tab.location)
                             
                           //  Text("Category")
-                            ContentView()
+                        ReservationListView()
                                 .tag(Tab.category)
                             
                             
@@ -78,7 +78,7 @@ struct MovieBookingApp: App {
                             VenueList()
                                 .tag(Tab.location)
                             
-                            WebView(url: URL(string: "https://github.com")!)
+                            ReservationListView()
                                 .tag(Tab.category)
                             
                             LoginView().environmentObject(sessionService).tag(Tab.profile)
